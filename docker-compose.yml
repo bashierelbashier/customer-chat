@@ -1,0 +1,13 @@
+services:
+  app:
+    build: .
+    container_name: CHAT-APP-FAST-API
+    tty: true
+    stdin_open: true
+    restart: always
+    volumes:
+      - ./app:/code/app
+      - ./templates:/code/templates
+      - ./static:/code/static
+    ports:
+      - "80:80"
